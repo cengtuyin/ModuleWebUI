@@ -1,0 +1,348 @@
+body {
+    background-color: #1B1B1F;
+    padding: 63px 0 0 0;
+    margin: 0;
+    margin-top: var(--window-inset-top);
+    margin-bottom: var(--window-inset-bottom);
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.Header {
+    padding-top: var(--window-inset-top);
+    width: 100%;
+    height: 63px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    z-index: 999;
+}
+.Header_Sub {
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+    backdrop-filter: blur(18px);
+    background-color: rgba(27,27,31, 0.95);
+}
+.Header_ContentView {
+    width: 80%;
+    max-width: 1376px;
+    height: 63px;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+.Header_NameView {
+    width: 30%;
+    height: 63px;
+    display: flex;
+    place-items: center;
+}
+.Header_NameView img {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+}
+.Header_NameView span {
+    font-size: 16px;
+    color: #DFDFD6;
+    font-weight: 600;
+}
+.Header_MoreView {
+    margin-left: auto;
+    height: 63px;
+}
+
+.Main {
+    width: 100%;
+}
+.Main_Title {
+    width: 70%;
+    max-width: 1152px;
+    height: 30%;
+    display: flex;
+    margin: 0 auto 0 auto;
+    padding: 2% 5% 2% 5%;
+}
+.Main_Title_Content {
+    width: 100%;
+}
+.Main_Title_Content_Name {
+    width: 100%;
+    line-height: 64px;
+    font-size: 56px;
+    background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+    background: linear-gradient(120deg, #41d1ff 1%, #bd34fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.Main_Title_Content_Text {
+    width: 100%;
+    line-height: 64px;
+    font-size: 56px;
+    color: #DFDFD6;
+}
+.Main_Title_Content_Text2 {
+    width: 100%;
+    color: #98989F;
+    line-height: 36px;
+    font-size: 24px;
+}
+.Main_Title_Icon {
+}
+.Main_Title_Icon img {
+    width: 320px;
+    height: 320px;
+}
+.Main_Title_Button {
+    padding-top: 8px;
+}
+.Main_Title_Button_Action {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 38px;
+    border-radius: 20px;
+    display:inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 0 20px 0 20px;
+    color: #000000;
+    background-color: #3B82F6;
+    transition: all 0.3s ease;
+}
+.Main_Title_Button_More {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 38px;
+    border-radius: 20px;
+    display:inline-block;
+    margin: 5px 5px 5px 5px;
+    padding: 0 20px 0 20px;
+    color: #FFFFFF;
+    background-color: rgb(65, 72, 83);
+    transition: all 0.3s ease;
+}
+.Main_Title_Button_Action:hover {
+    background-color: rgb(80, 88, 98);
+    border-color: blue;
+}
+.Main_Title_Button_More:hover {
+    background-color: rgb(80, 88, 98);
+}
+.Main_Content_List {
+    width: 70%;
+    max-width: 1152px;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 0 auto 0 auto;
+    padding: 0 5% 15% 5%;
+}
+.Main_Content_List div {
+    border-radius: 12px;
+    padding: 24px;
+    margin: 8px;
+}
+.Main_Content_List div h2 {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #DFDFD6;
+    margin: 0;
+}
+.Main_Content_List div p {
+    flex-grow: 1;
+    padding-top: 8px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #98989F;
+    margin: 0;
+}
+.Main_Content_List_Tips {
+    background-color: rgb(32, 33, 39);
+}
+.Main_Content_List_Title {
+    background-color: rgb(0, 79, 0);
+    display: flex;
+}
+.Main_Content_List_Title svg {
+    width: 48px;
+    height: 48px;
+}
+.Main_Content_List_Title svg path {
+    width: 48px;
+    height: 48px;
+    fill: #DFDFD6;
+}
+.Main_Content_List_Title div {
+    padding: 0px;
+    margin: 0 0 0 16px;
+}
+.Main_Content_List_Title div p {
+    line-height: 0;
+}
+
+
+.Main_Tips_Status {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.Main_Tips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.Main_Tips svg {
+    width: 48px;
+    height: 48px;
+}
+.Main_Tips_Loading svg {
+    animation: Loading 0.3s linear infinite;
+}
+.Main_Tips svg path {
+    fill: #98989F;
+}
+.Main_Tips span {
+    width: 100%;
+    font-size: 16px;
+    color: #98989F;
+}
+@keyframes Loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.Bottom {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 64px;
+    white-space: nowrap;
+    border-top: 1px solid rgba(0,0,0,0.8);
+    backdrop-filter: blur(18px);
+    background-color: rgba(27,27,31, 0.95);
+}
+.Bottom a {
+    flex: 1;
+    width: 48px;
+    height: 48px;
+    margin: 0 12px 0 12px;
+    display: inline-grid;
+}
+.Bottom a svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 0 auto;
+}
+.Bottom a svg path {
+    fill: #98989F;
+}
+.Bottom a span {
+    text-align: center;
+    color: #98989F;
+}
+
+@media only screen and (max-width: 1152px) {
+    /* 手机设备样式 */
+    .Header_ContentView {
+        width: 92%;
+    }
+    .Main_Title {
+        width: 100vw;
+        padding: 0 0 8% 0;
+        text-align: center;
+        display: grid;
+    }
+    .Main_Title .Main_Title_Content {
+        grid-row: 2;
+    }
+    .Main_Title .Main_Title_Icon {
+        grid-row: 1;
+    }
+    .Main_Title_Icon img {
+        margin-top: 20%;
+        width: 30vw;
+        height: 30vw;
+    }
+    .Main_Title_Content_Name {
+        font-size: 1.1em;
+        line-height: 0px;
+    }
+    .Main_Title_Content_Text {
+        font-size: 1.1em;
+        line-height: 0px;
+    }
+    .Main_Title_Content_Text2 {
+        font-size: 1.1em;
+        line-height: 0px;
+    }
+    .Main_Content_List {
+        width: 92%;
+        padding: 0 0 20% 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.Main_Text {
+    color: #DFDFD6;
+}
+.Main_Cord {
+    background-color: #202127;
+}
+.Main_Cord_Main {
+    color: #98989F;
+}
+.Main_Button_NH {
+    background-color: #32363F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
